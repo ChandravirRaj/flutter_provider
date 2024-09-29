@@ -37,7 +37,7 @@ class _CountExampleState extends State<CountExample> {
           child: Consumer<CountProvider>(
             builder: (context, countProvider, child) {
               return Text(
-                '${countProvider.count}',
+                '${context.watch<CountProvider>().count}',
                 style: const TextStyle(fontSize: 30, fontWeight: FontWeight.w500),
               );
             },
@@ -46,7 +46,7 @@ class _CountExampleState extends State<CountExample> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          provider.setCount();
+          context.read<CountProvider>().setCount();
         },
         child: const Icon(Icons.add),
       ),
