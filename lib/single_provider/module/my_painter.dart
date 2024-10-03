@@ -5,7 +5,7 @@ class MyPainter extends CustomPainter {
   void paint(Canvas canvas, Size size) {
     // Create a Paint object to define the appearance of the shape
     final Paint paint = Paint()
-      ..color = Colors.green // Set the color to green
+      ..color = Colors.deepPurple.shade100 // Set the color to green
       ..strokeWidth = 4 // Set the stroke width
       ..style = PaintingStyle.fill; // Set the style to fill
 

@@ -24,6 +24,7 @@ class _CustomPaintExampleState extends State<CustomPaintExample> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('CustomPaint Example'),
+        backgroundColor: Colors.deepPurple.shade100,
       ),
       body: Center(
           child: Column(
