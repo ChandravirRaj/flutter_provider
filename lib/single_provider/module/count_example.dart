@@ -20,7 +20,7 @@ class _CountExampleState extends State<CountExample> {
 
   @override
   Widget build(BuildContext context) {
-    var provider = Provider.of<CountProvider>(context,listen: false);
+    var provider = Provider.of<CountProvider>(context, listen: false);
 
     if (kDebugMode) {
       print("let's check build method ------->> build");
@@ -38,7 +38,8 @@ class _CountExampleState extends State<CountExample> {
             builder: (context, countProvider, child) {
               return Text(
                 '${context.watch<CountProvider>().count}',
-                style: const TextStyle(fontSize: 30, fontWeight: FontWeight.w500),
+                style:
+                    const TextStyle(fontSize: 30, fontWeight: FontWeight.w500),
               );
             },
           ),

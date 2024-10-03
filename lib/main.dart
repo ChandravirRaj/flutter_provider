@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_provider/single_provider/module/count_example.dart';
+import 'package:flutter_provider/single_provider/module/custom_paint_example.dart';
+import 'package:flutter_provider/single_provider/provider/circle_provider.dart';
 import 'package:flutter_provider/single_provider/provider/count_provider.dart';
 import 'package:provider/provider.dart';
 
@@ -13,24 +15,24 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return ChangeNotifierProvider(
-      create: (_) => CountProvider(),
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider(
+          create: (_) => CountProvider(),
+        ),
+        ChangeNotifierProvider(
+          create: (_) => CircleProvider(),
+        )
+      ],
       child: MaterialApp(
         title: 'Flutter Demo',
         theme: ThemeData(
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           useMaterial3: true,
         ),
-        home: const CountExample(),
+        home: const CustomPaintExample(),
       ),
-    );
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
-      home: const CountExample(),
     );
   }
+
 }
