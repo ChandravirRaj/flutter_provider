@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_provider/single_provider/module/count_example.dart';
-import 'package:flutter_provider/single_provider/module/custom_paint_example.dart';
 import 'package:flutter_provider/single_provider/provider/circle_provider.dart';
 import 'package:flutter_provider/single_provider/provider/count_provider.dart';
 import 'package:provider/provider.dart';
@@ -30,7 +29,7 @@ class MyApp extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           useMaterial3: true,
         ),
-        home: const CustomPaintExample(),
+        home: const CountExample(),
       ),
     );
   }
