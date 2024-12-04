@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_provider/single_provider/module/theme_changer_screen.dart';
 import 'package:flutter_provider/single_provider/provider/count_provider.dart';
 import 'package:provider/provider.dart';
 
@@ -65,6 +66,18 @@ class _CountExampleState extends State<CountExample> {
                 },
                 child: const Text(
                   "Custom Paint",
+                  style: TextStyle(fontWeight: FontWeight.w700),
+                ),
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) =>  ThemeChangerScreen()),
+                  );
+                },
+                child: const Text(
+                  "Theme Changer",
                   style: TextStyle(fontWeight: FontWeight.w700),
                 ),
               ),
